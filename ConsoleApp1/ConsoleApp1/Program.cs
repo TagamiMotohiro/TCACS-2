@@ -102,3 +102,118 @@
 //    n2 = fib;
 //    Console.WriteLine(fib);
 //}
+//ハンズオン11(BMI計算アプリケーション)体重(kg)÷身長(m)2乗
+//ハンズオン12(BMI計算アプリケーション改良)型キャスト;
+//ハンズオン13(BMI計算アプリケーションエラーハンドリング）try-catch文
+//string userweight;
+//float weight;
+//string userheight;
+//float height;
+//float BMI;
+//do
+//{
+//    Console.WriteLine("身長(m)を入力");
+//    userheight = Console.ReadLine() ?? "";
+//    try
+//    {
+//        height = float.Parse(userheight);
+//    }
+//    catch
+//    {
+//        userheight = null;
+//        Console.WriteLine("数値を入力してください");
+//    }
+//} while (userheight == null);
+//height = float.Parse(userheight);
+//Console.WriteLine("身長=" + height.ToString() + "m");
+//do
+//{
+//    Console.WriteLine("体重(kg)を入力");
+//    userweight = Console.ReadLine() ?? "";
+//    try
+//    {
+//        weight = float.Parse(userweight);
+//    }
+//    catch
+//    {
+//        userweight = null;
+//        Console.WriteLine("数値を入力してください");
+//    }
+//} while (userweight == null);
+//weight = float.Parse(userweight);
+//Console.WriteLine("体重=" + weight.ToString() + "kg");
+//BMI = weight / (height * height);
+//Console.WriteLine("BMI=" + BMI.ToString("F2"));
+
+//ハンズオン14(BMI計算アプリケーション　TryParce)
+//string userweight;
+//string userheight;
+//bool parseSuccess=false;
+//float height = 0;
+//while (!parseSuccess)
+//{
+//    Console.WriteLine("身長を入力");
+//    userheight =Console.ReadLine()??"";
+//    parseSuccess=float.TryParse(userheight,out height);
+//    if(!parseSuccess)
+//    {
+//        Console.WriteLine("数値を入力してください");
+//    }    
+//}
+//parseSuccess=false;
+//float weight = 0;
+//while(!parseSuccess)
+//{
+//    Console.WriteLine("体重を入力");
+//    userweight =Console.ReadLine()??"";
+//    parseSuccess =float.TryParse(userweight,out weight);
+//    if (!parseSuccess)
+//    {
+//      Console.WriteLine("数値を入力してください");
+//    }
+//}
+//float BMI = weight / (height * height);
+//Console.WriteLine("BMI=" + BMI.ToString("F2"));
+
+//ハンズオン15(配列とfor文)
+int[] index=new int[] {55,68,78,56,15,35,99,44,56,34,21,64,95,71};
+int min=0;
+int max=0;
+float ave=0;
+int sum = 0;
+int centernum=0;
+int center = 0;
+Array.Sort(index);
+for (int i=0; i < index.Length; i++)
+{
+    Console.WriteLine(index[i]);
+    if(index[i]>=max)
+    {
+        max=index[i];
+    }
+    sum+=index[i];
+}
+ave=(float)sum/(float)index.Length;
+min=max;
+for (int i = 0; i < index.Length; i++)
+{
+    if (index[i] <= min)
+    {
+        min = index[i];
+    }
+}
+if (index.Length / 2 == 0)
+{
+    centernum = (index.Length / 2) + ((index.Length - 1) / 2);
+}
+else
+{
+    centernum = (index.Length - 1) / 2;
+    //centernum = index.Length / 2;
+    //centernum = (float)Math.Floor(centernum);
+    
+}
+Console.WriteLine("中央値="+index[centernum]);
+Console.WriteLine("最小="+min);
+Console.WriteLine("最大="+max);
+Console.WriteLine("平均="+ave);
