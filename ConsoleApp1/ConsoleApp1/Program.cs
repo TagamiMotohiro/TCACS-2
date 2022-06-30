@@ -176,44 +176,44 @@
 //Console.WriteLine("BMI=" + BMI.ToString("F2"));
 
 //ハンズオン15(配列とfor文)
-int[] index=new int[] {55,68,78,56,15,35,99,44,56,34,21,64,95,71};
-int min=0;
-int max=0;
-float ave=0;
-int sum = 0;
-int centernum=0;
-int center = 0;
-Array.Sort(index);
-for (int i=0; i < index.Length; i++)
-{
-    Console.WriteLine(index[i]);
-    if(index[i]>=max)
-    {
-        max=index[i];
-    }
-    sum+=index[i];
-}
-ave=(float)sum/(float)index.Length;
-min=max;
-for (int i = 0; i < index.Length; i++)
-{
-    if (index[i] <= min)
-    {
-        min = index[i];
-    }
-}
-if (index.Length / 2 == 0)
-{
-    centernum = (index.Length / 2) + ((index.Length - 1) / 2);
-}
-else
-{
-    centernum = (index.Length - 1) / 2;
-    //centernum = index.Length / 2;
-    //centernum = (float)Math.Floor(centernum);
+//int[] index=new int[] {55,68,78,56,15,35,99,44,56,34,21,64,95,71};
+//int min=0;
+//int max=0;
+//float ave=0;
+//int sum = 0;
+//int centernum=0;
+//int center = 0;
+//Array.Sort(index);
+//for (int i=0; i < index.Length; i++)
+//{
+//    Console.WriteLine(index[i]);
+//    if(index[i]>=max)
+//    {
+//        max=index[i];
+//    }
+//    sum+=index[i];
+//}
+//ave=(float)sum/(float)index.Length;
+//min=max;
+//for (int i = 0; i < index.Length; i++)
+//{
+//    if (index[i] <= min)
+//    {
+//        min = index[i];
+//    }
+//}
+//if (index.Length / 2 == 0)
+//{
+//    centernum = (index.Length / 2) + ((index.Length - 1) / 2);
+//}
+//else
+//{
+//    centernum = (index.Length - 1) / 2;
+//    //centernum = index.Length / 2;
+//    //centernum = (float)Math.Floor(centernum);
     
-}
-Console.WriteLine("中央値="+index[centernum]);
-Console.WriteLine("最小="+min);
-Console.WriteLine("最大="+max);
-Console.WriteLine("平均="+ave);
+//}
+//Console.WriteLine("中央値="+index[centernum]);
+//Console.WriteLine("最小="+min);
+//Console.WriteLine("最大="+max);
+//Console.WriteLine("平均="+ave);
